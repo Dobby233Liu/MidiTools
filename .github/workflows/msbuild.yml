@@ -15,4 +15,7 @@ jobs:
           # Artifact name
           name: miditools-win32-msvc-release-test
           # A file, directory or wildcard pattern that describes what to upload
-          path: Release/
+          path: |
+              Release/*.pdb
+              Release/*.exe
+              !Release/vc142.pdb
