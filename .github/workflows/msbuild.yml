@@ -10,3 +10,9 @@ jobs:
       - uses: microsoft/setup-msbuild@master
       - run: "msbuild MidiTools.sln /p:Platform=Win32;Configuration=Release;PlatformToolset=v142 /tv:Current"
         shell: cmd # forced to do so
+      - uses: actions/upload-artifact@v2
+        with:
+          # Artifact name
+          name: miditools-win32-msvc-release-test
+          # A file, directory or wildcard pattern that describes what to upload
+          path: Release/
