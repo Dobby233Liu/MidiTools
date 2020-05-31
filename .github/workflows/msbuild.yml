@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: microsoft/setup-msbuild@master
-      - run: "msbuild MidiTools.sln /p:Platform=Win32;Configuration=Release /tv:Current"
+      - run: "msbuild MidiTools.sln /p:Platform=Win32;Configuration=Release;PlatformToolset=v142 /tv:Current"
         shell: cmd # forced to do so
